@@ -1,0 +1,10 @@
+{
+  "name": "micro-asnmt",
+  "version": "1.0.0",
+  "description": "LaGuardia Airport Parking Availability tracker for ProPark Code Challenge",
+  "main": "index.js",
+  "repository": "https://github.com/actuallydan/micro-asnmt.git",
+  "author": "Dan Kral",
+  "license": "Apache 2.0",
+  "private": true
+}
