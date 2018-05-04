@@ -1,7 +1,8 @@
 {
 	"name": "propark-code-challenge",
 	"version": "1.0.0",
-	"description": "LaGuardia Airport Parking Availability tracker for ProPark Code Challenge",
+	"description":
+		"LaGuardia Airport Parking Availability tracker for ProPark Code Challenge",
 	"main": "index.js",
 	"scripts": {
 		"start": "node index.js"
@@ -11,6 +12,7 @@
 	"license": "Apache 2.0",
 	"private": true,
 	"dependencies": {
-		"express": "^4.16.3"
+		"@google-cloud/bigquery": "^1.2.0",
+		"axios": "^0.18.0"
 	}
 }

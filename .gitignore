@@ -1,0 +1,4 @@
+.DS_Store
+/node_modules
+keys.json
+cloud_sql_proxy
