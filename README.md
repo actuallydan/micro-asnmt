@@ -2,7 +2,7 @@
 
 LaGuardia Airport Parking Availability tracker for ProPark Micro Assignment
 
-[Running on Google App Engine](propark-code-challenge.appspot.com)
+[Running on Google App Engine](https://propark-code-challenge.appspot.com)
 
 ## Objective
 
@@ -34,3 +34,19 @@ My immediate thought was to use a similar web-scraper package I had used before,
 Not being too familiar with BigTable yet, I wanted to make sure that I wouldn't run into "table doesn't exist" errors so I did some simple validation before adding the data.
 
 Once settled, the script gets the first batch of availability data and then initializes an interval upon which it will re-get the information and append it to the BigQuery table.
+
+#### Deploying
+
+Once everything is commited, the app can be deployed to gcloud App Engine with:
+
+```
+gcloud app deploy --project propark-code-challenge
+```
+
+#### Logging
+
+Once deployed, logs can be viewed either through the GCloud Console or by typing
+
+```
+gcloud app logs tail -s default
+```

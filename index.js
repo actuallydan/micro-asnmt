@@ -44,7 +44,7 @@ const bigquery = new BigQuery({
 
     setInterval(function() {
         updateAvailability();
-    }, 30 * 60 * 1000);
+    }, 10 * 1000);
 })();
 
 async function updateAvailability() {
@@ -60,7 +60,7 @@ async function updateAvailability() {
         const table = dataset.table(tableName);
 
         /* Insert the data into Google BigQuery */
-        await insertData(row, table);
+        const res = await insertData(row, table);
         console.log("Ending run");
     } catch (err) {
         console.error(new Error(err));
@@ -124,9 +124,10 @@ function insertData(row, table) {
     return new Promise(function(resolve, reject) {
         table.insert(row, { raw: true }, (err, response) => {
             if (err) {
+                console.log(err);
                 reject(err);
             }
-            resolve();
+            resolve(response);
         });
     });
 }
